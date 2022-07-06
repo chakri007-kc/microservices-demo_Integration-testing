@@ -1,10 +1,12 @@
-FROM node:4-alpine
+FROM node
 
-RUN apk update && apk add make
+COPY ./ /app
 
-RUN npm install -g phantomjs-prebuilt
-RUN npm install -g casperjs
+WORKDIR /app
 
-RUN mkdir -p /usr/src/app
+RUN npm install
 
-WORKDIR /usr/src/app
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+RUN chmod +x /wait
+
+CMD /wait && npm run test

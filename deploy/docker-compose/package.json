@@ -1,0 +1,12 @@
+{
+  "name": "docker-compose",
+  "version": "1.0.0",
+  "description": "See the [documentation](https://microservices-demo.github.io/deployment/docker-compose.html) on how to deploy Sock Shop using Docker Compose.",
+  "main": "helpers_test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
